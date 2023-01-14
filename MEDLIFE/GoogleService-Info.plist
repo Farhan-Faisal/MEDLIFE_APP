@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>210000401022-aeni2etcg46uo70ml2m69cvu81fni6ov.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.210000401022-aeni2etcg46uo70ml2m69cvu81fni6ov</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCPIgfkzTnG7BtWLgamZfScbA27iGinE5Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>210000401022</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>studentOrg.MEDLIFE</string>
+	<key>PROJECT_ID</key>
+	<string>medlife-utsc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>medlife-utsc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:210000401022:ios:1be9024d7a9196bfb6be2f</string>
+	<key>DATABASE_URL</key>
+	<string>https://medlife-utsc-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
