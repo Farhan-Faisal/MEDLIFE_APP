@@ -8,6 +8,11 @@
 import Foundation
 import FirebaseDatabase
 
+struct LoginCredentials: Identifiable, Codable, Hashable{
+    var id: String
+    var UTorID: String
+    var password: String
+}
 
 final class WriteExec: ObservableObject {
     
@@ -66,6 +71,9 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
     var exec: Executive? = nil
     
     @Published
+    var login: [LoginCredentials] = [LoginCredentials]()
+        
+    @Published
     var taskList: [Task] = [Task]()
     
     @Published
@@ -112,7 +120,10 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
         }
     }
     
+    
     func getAllChildKeys(childKey: String, completion: @escaping (Bool) -> ()) {
+        self.fetchedKeys.removeAll()
+        
         let child = ref.child(childKey)
 
         child.observeSingleEvent(of: .value){ snapshot  in
@@ -198,5 +209,43 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
         }
         completion(flag)
     }
+    
+    
+    func generateLoginList(keys: [String], completion: @escaping (Bool) -> ()){
+        for item in keys{
+            let child = ref.child("Login/\(item)")
+            child.observeSingleEvent(of: .value){[weak self] snapshot in
+                
+                guard
+                    let self = self,
+                    var json = snapshot.value as? [String: Any]
+                else {
+                    return
+                }
+                
+                json["id"] = snapshot.key
+                do {
+                    let loginData = try JSONSerialization.data(withJSONObject: json)
+                    let temp = try JSONDecoder().decode(LoginCredentials.self, from: loginData)
+                    
+                    print(temp.UTorID)
+                    print(temp.password)
+                    
+                    if self.login.contains(temp) == false{
+                        self.login.append(temp)
+                    }
+                } catch {
+                    print("an error occurred", error)
+                }
+            }
+        }
+        
+        var flag = false
+        if (self.login.count == self.fetchedKeys.count){
+            flag = true
+        }
+        completion(flag)
+    }
+    
     
 }

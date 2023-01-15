@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ExecLogin: View {
     
-    @State private var email: String = ""
+    @ObservedObject var readViewModel = ReadFromDatabase()
+    @State private var UTorID: String = ""
     @State private var password: String = ""
+    @State private var goesToDetail: Bool = false
     
     var body: some View {
         
@@ -20,8 +22,8 @@ struct ExecLogin: View {
                 .fontWeight(.bold)
                 .padding()
             
-            TextField("Email",
-                      text: $email)
+            TextField("UTorID",
+                      text: $UTorID)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 300, height: 50, alignment: .center)
                 .border(.black)
@@ -32,14 +34,34 @@ struct ExecLogin: View {
                 .frame(width: 300, height: 50, alignment: .center)
                 .border(.black)
             
-            Button("Login", action: {})
-                .fontWeight(.medium)
-                .foregroundColor(.white)
-                .frame(width: 300, height: 50, alignment: .center)
-                .background(.black)
-                .padding(15)
+            VStack {
+                Button {
+                    for item in readViewModel.login{
+                        if item.password == self.password {
+                            if item.UTorID == self.UTorID {
+                                goesToDetail = true
+                            }
+                        }
+                    }
+                } label: {
+                    Text("LOGIN")
+                }
+                .onTapGesture {
+                }
+            }
+            .navigationDestination(isPresented: $goesToDetail) {
+                ExecHomeView()
+            }
+            .buttonStyle(RoundedRectangleButtonStyle())
+            
         }
-        
+        .onAppear(){
+            self.readViewModel.getAllChildKeys(childKey: "Login"){complete in
+                let keys = self.readViewModel.fetchedKeys
+                self.readViewModel.generateLoginList(keys: keys){fin in
+                }
+            }
+        }
     }
 }
 

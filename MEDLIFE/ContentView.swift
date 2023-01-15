@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        OpeningPage()
+        OpeningPage()
         //ExecScrollView()
-        ExecHomeView()
+//        ExecHomeView()
 //        TaskScrollView()
         .padding()
     }

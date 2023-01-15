@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+//NavigationStack {
+//        VStack(spacing: 20) {
+//            NavigationLink("Navigate: String Value", value: "New Page")
+//
+//            NavigationLink("Navigate: Int Value", value: 1)
+//
+//            ForEach(fruits, id:\.self) { fruit in
+//                NavigationLink(fruit, value: fruit)
+//            }
+//        }
+//        .navigationDestination(for: String.self) { value in
+//            Text("New screen")
+//            Text("Value is String -> \(value)")
+//        }
+//        .navigationDestination(for: Int.self) { value in
+//            Text("New screen")
+//            Text("Value is Integer -> \(value)")
+//        }
+//    }
+//}
+
 struct temp: View {
     
     //    @State var selectedDate = Date()
@@ -16,6 +37,15 @@ struct temp: View {
     //        return min...max
     //    }
         
+
+//    let m = Task(id: "test789", execID: "faisalf4", name: "TestTask", deadline: Date(), completed: false, approved: false)
+//    let n = Executive(id: "danielle", name: "Danielle Nanquil", position: "Secretary", email: "danielle.nanquil@mail.utoronto.ca")
+//
+//    let execDB = WriteExec(exec: n)
+//    execDB.write();
+//
+//    let taskDB = WriteTask(task: m)
+//    taskDB.write()
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)

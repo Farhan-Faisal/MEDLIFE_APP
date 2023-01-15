@@ -30,6 +30,8 @@
 		D884E85D2972556E00EE1F10 /* ExecListComponetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */; };
 		D884E85F2972658D00EE1F10 /* TaskListComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */; };
 		D884E86129726EEB00EE1F10 /* TaskScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884E86029726EEB00EE1F10 /* TaskScrollView.swift */; };
+		D886A5592973F0D7007395A0 /* EventListComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886A5582973F0D7007395A0 /* EventListComponentView.swift */; };
+		D886A55B2973F0F7007395A0 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886A55A2973F0F7007395A0 /* EventModel.swift */; };
 		D88A40B6295F42EE00AC15E1 /* MEDLIFEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */; };
 		D88A40B8295F42EE00AC15E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A40B7295F42EE00AC15E1 /* ContentView.swift */; };
 		D88A40BA295F42EF00AC15E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88A40B9295F42EF00AC15E1 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecListComponetView.swift; sourceTree = "<group>"; };
 		D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListComponentView.swift; sourceTree = "<group>"; };
 		D884E86029726EEB00EE1F10 /* TaskScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScrollView.swift; sourceTree = "<group>"; };
+		D886A5582973F0D7007395A0 /* EventListComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListComponentView.swift; sourceTree = "<group>"; };
+		D886A55A2973F0F7007395A0 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		D88A40B2295F42EE00AC15E1 /* MEDLIFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDLIFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEDLIFEApp.swift; sourceTree = "<group>"; };
 		D88A40B7295F42EE00AC15E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
 				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
 				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+				D886A5582973F0D7007395A0 /* EventListComponentView.swift */,
+				D886A55A2973F0F7007395A0 /* EventModel.swift */,
 			);
 			path = MEDLIFE;
 			sourceTree = "<group>";
@@ -351,9 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D884E85D2972556E00EE1F10 /* ExecListComponetView.swift in Sources */,
+				D886A5592973F0D7007395A0 /* EventListComponentView.swift in Sources */,
 				D88164D42969734A005E1974 /* ExecModel.swift in Sources */,
 				D88164DC296B7B8F005E1974 /* ExecHomeView.swift in Sources */,
 				D884E86129726EEB00EE1F10 /* TaskScrollView.swift in Sources */,
+				D886A55B2973F0F7007395A0 /* EventModel.swift in Sources */,
 				D8258F732971AE7C00D86113 /* ExecScrollView.swift in Sources */,
 				D88A40B8295F42EE00AC15E1 /* ContentView.swift in Sources */,
 				D88A40E0295F433600AC15E1 /* OpeningPage.swift in Sources */,

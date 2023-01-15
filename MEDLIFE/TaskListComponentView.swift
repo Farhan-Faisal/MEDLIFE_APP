@@ -14,7 +14,6 @@ struct TaskListComponentView: View {
     var body: some View {
         
         VStack(alignment: .leading){
-            
             HStack{
                 Text(task.name)
                     .foregroundColor(.black)
@@ -31,7 +30,7 @@ struct TaskListComponentView: View {
                     .padding(EdgeInsets(top: 0.1, leading: 10, bottom: 0.2, trailing: 0))
             }
             
-
+            
             HStack{
                 if isComplete{
                     Text("Status: Pending Approval")
@@ -53,12 +52,12 @@ struct TaskListComponentView: View {
             
             HStack{
                 Toggle("Mark as complete", isOn: $isComplete)
-                .padding(EdgeInsets(top: 0.1, leading: 10, bottom: 0.2, trailing: 10))
+                    .padding(EdgeInsets(top: 0.1, leading: 10, bottom: 0.2, trailing: 10))
             }
         }
         .frame(width: 370, height: 150)
         .padding(EdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 2))
-        .border(.black, width: 1)
+
     }
 }
 

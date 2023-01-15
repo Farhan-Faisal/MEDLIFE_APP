@@ -16,7 +16,6 @@ struct TaskScrollView: View {
             List(readViewModel.taskList, id: \.self){task in
                 TaskListComponentView(task: task)
             }
-            
             .frame(width: 450, alignment: .leading)
             .background(Color.white)
             .onAppear(){
@@ -27,7 +26,8 @@ struct TaskScrollView: View {
                 }
             }
             .navigationBarTitle("Task List")
-            .font(.system(size: 20))
+            .navigationBarTitleDisplayMode(.inline)
+            .font(.system(size: 18))
         }
 
     }
