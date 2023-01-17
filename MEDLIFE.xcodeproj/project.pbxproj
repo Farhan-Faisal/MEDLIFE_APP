@@ -143,6 +143,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D83B1CD32976F5A100BAF1C1 /* ModifyAssignTaskViews */ = {
+			isa = PBXGroup;
+			children = (
+				D89B8ED32976B30300A39F89 /* CreateTaskView.swift */,
+				D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */,
+				D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */,
+				D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */,
+				D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */,
+			);
+			path = ModifyAssignTaskViews;
+			sourceTree = "<group>";
+		};
+		D83B1CD42976F62600BAF1C1 /* EventViews */ = {
+			isa = PBXGroup;
+			children = (
+				D89B8EDD2976F03100A39F89 /* PublishEventView.swift */,
+				D886A5582973F0D7007395A0 /* EventListComponentView.swift */,
+				D886A55A2973F0F7007395A0 /* EventModel.swift */,
+				D88164D9296B7543005E1974 /* ExecEventView.swift */,
+			);
+			path = EventViews;
+			sourceTree = "<group>";
+		};
+		D83B1CD52976F64600BAF1C1 /* TaskDisplayViews */ = {
+			isa = PBXGroup;
+			children = (
+				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
+				D88164D52969748F005E1974 /* TaskModel.swift */,
+				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+			);
+			path = TaskDisplayViews;
+			sourceTree = "<group>";
+		};
 		D88A40A9295F42EE00AC15E1 = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +201,7 @@
 			children = (
 				D88A40B9295F42EF00AC15E1 /* Assets.xcassets */,
 				D88A40B7295F42EE00AC15E1 /* ContentView.swift */,
-				D89B8ED32976B30300A39F89 /* CreateTaskView.swift */,
-				D886A5582973F0D7007395A0 /* EventListComponentView.swift */,
-				D886A55A2973F0F7007395A0 /* EventModel.swift */,
-				D88164D9296B7543005E1974 /* ExecEventView.swift */,
+				D83B1CD42976F62600BAF1C1 /* EventViews */,
 				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
 				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
 				D898223D2962B13700AECC73 /* ExecLogin.swift */,
@@ -180,18 +210,12 @@
 				D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */,
 				D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */,
 				D898223F2962B45E00AECC73 /* MemberLogin.swift */,
-				D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */,
-				D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */,
-				D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */,
-				D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */,
+				D83B1CD32976F5A100BAF1C1 /* ModifyAssignTaskViews */,
 				D88A40DF295F433600AC15E1 /* OpeningPage.swift */,
 				D88A40BB295F42EF00AC15E1 /* Preview Content */,
 				D88164D72969752B005E1974 /* ReadViewModel.swift */,
-				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
-				D88164D52969748F005E1974 /* TaskModel.swift */,
-				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+				D83B1CD52976F64600BAF1C1 /* TaskDisplayViews */,
 				D898223B2962AFED00AECC73 /* temp.swift */,
-				D89B8EDD2976F03100A39F89 /* PublishEventView.swift */,
 			);
 			path = MEDLIFE;
 			sourceTree = "<group>";
