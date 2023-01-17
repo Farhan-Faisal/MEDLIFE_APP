@@ -15,20 +15,16 @@ struct EventListComponentView: View {
             VStack(alignment: .leading){
                 Text(event.name)
                     .foregroundColor(.black)
-                    .fontWeight(.bold)
                     .font(.system(size: 20))
                 
                 Text(event.eventDate.formatted(date: .long, time: .omitted))
                     .foregroundColor(.black)
-                    .fontWeight(.bold)
                     .font(.system(size: 15))
                 
                 Text("Attendance/\(event.attendance)")
                     .foregroundColor(.black)
-                    .fontWeight(.bold)
                     .font(.system(size: 15))
             }
-            .padding(.vertical, 2)
     }
 }
 

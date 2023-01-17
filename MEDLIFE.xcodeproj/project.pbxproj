@@ -43,6 +43,12 @@
 		D898223C2962AFED00AECC73 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898223B2962AFED00AECC73 /* temp.swift */; };
 		D898223E2962B13700AECC73 /* ExecLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898223D2962B13700AECC73 /* ExecLogin.swift */; };
 		D89822402962B45E00AECC73 /* MemberLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898223F2962B45E00AECC73 /* MemberLogin.swift */; };
+		D89B8ED42976B30300A39F89 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED32976B30300A39F89 /* CreateTaskView.swift */; };
+		D89B8ED62976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */; };
+		D89B8ED82976E55400A39F89 /* ModifyTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */; };
+		D89B8EDA2976E77200A39F89 /* ModifyDeleteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */; };
+		D89B8EDC2976E9BD00A39F89 /* ModifyDeleteAssignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */; };
+		D89B8EDE2976F03100A39F89 /* PublishEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8EDD2976F03100A39F89 /* PublishEventView.swift */; };
 		D8EFDA91296EC37E00452A57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +95,12 @@
 		D898223B2962AFED00AECC73 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		D898223D2962B13700AECC73 /* ExecLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecLogin.swift; sourceTree = "<group>"; };
 		D898223F2962B45E00AECC73 /* MemberLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLogin.swift; sourceTree = "<group>"; };
+		D89B8ED32976B30300A39F89 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
+		D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeleteTaskComponentView.swift; sourceTree = "<group>"; };
+		D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyTaskView.swift; sourceTree = "<group>"; };
+		D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeleteScrollView.swift; sourceTree = "<group>"; };
+		D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeleteAssignView.swift; sourceTree = "<group>"; };
+		D89B8EDD2976F03100A39F89 /* PublishEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishEventView.swift; sourceTree = "<group>"; };
 		D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,26 +166,32 @@
 		D88A40B4295F42EE00AC15E1 /* MEDLIFE */ = {
 			isa = PBXGroup;
 			children = (
-				D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */,
-				D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */,
-				D88A40B7295F42EE00AC15E1 /* ContentView.swift */,
 				D88A40B9295F42EF00AC15E1 /* Assets.xcassets */,
-				D88A40BB295F42EF00AC15E1 /* Preview Content */,
-				D88A40DF295F433600AC15E1 /* OpeningPage.swift */,
-				D898223B2962AFED00AECC73 /* temp.swift */,
-				D898223D2962B13700AECC73 /* ExecLogin.swift */,
-				D898223F2962B45E00AECC73 /* MemberLogin.swift */,
-				D88164D32969734A005E1974 /* ExecModel.swift */,
-				D88164D52969748F005E1974 /* TaskModel.swift */,
-				D88164D72969752B005E1974 /* ReadViewModel.swift */,
-				D88164D9296B7543005E1974 /* ExecEventView.swift */,
-				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
-				D8258F722971AE7C00D86113 /* ExecScrollView.swift */,
-				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
-				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
-				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+				D88A40B7295F42EE00AC15E1 /* ContentView.swift */,
+				D89B8ED32976B30300A39F89 /* CreateTaskView.swift */,
 				D886A5582973F0D7007395A0 /* EventListComponentView.swift */,
 				D886A55A2973F0F7007395A0 /* EventModel.swift */,
+				D88164D9296B7543005E1974 /* ExecEventView.swift */,
+				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
+				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
+				D898223D2962B13700AECC73 /* ExecLogin.swift */,
+				D88164D32969734A005E1974 /* ExecModel.swift */,
+				D8258F722971AE7C00D86113 /* ExecScrollView.swift */,
+				D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */,
+				D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */,
+				D898223F2962B45E00AECC73 /* MemberLogin.swift */,
+				D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */,
+				D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */,
+				D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */,
+				D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */,
+				D88A40DF295F433600AC15E1 /* OpeningPage.swift */,
+				D88A40BB295F42EF00AC15E1 /* Preview Content */,
+				D88164D72969752B005E1974 /* ReadViewModel.swift */,
+				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
+				D88164D52969748F005E1974 /* TaskModel.swift */,
+				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+				D898223B2962AFED00AECC73 /* temp.swift */,
+				D89B8EDD2976F03100A39F89 /* PublishEventView.swift */,
 			);
 			path = MEDLIFE;
 			sourceTree = "<group>";
@@ -357,20 +375,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D884E85D2972556E00EE1F10 /* ExecListComponetView.swift in Sources */,
+				D89B8ED82976E55400A39F89 /* ModifyTaskView.swift in Sources */,
 				D886A5592973F0D7007395A0 /* EventListComponentView.swift in Sources */,
+				D89B8EDE2976F03100A39F89 /* PublishEventView.swift in Sources */,
+				D89B8ED62976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift in Sources */,
 				D88164D42969734A005E1974 /* ExecModel.swift in Sources */,
 				D88164DC296B7B8F005E1974 /* ExecHomeView.swift in Sources */,
 				D884E86129726EEB00EE1F10 /* TaskScrollView.swift in Sources */,
 				D886A55B2973F0F7007395A0 /* EventModel.swift in Sources */,
 				D8258F732971AE7C00D86113 /* ExecScrollView.swift in Sources */,
 				D88A40B8295F42EE00AC15E1 /* ContentView.swift in Sources */,
+				D89B8EDC2976E9BD00A39F89 /* ModifyDeleteAssignView.swift in Sources */,
 				D88A40E0295F433600AC15E1 /* OpeningPage.swift in Sources */,
 				D88A40B6295F42EE00AC15E1 /* MEDLIFEApp.swift in Sources */,
 				D89822402962B45E00AECC73 /* MemberLogin.swift in Sources */,
 				D898223C2962AFED00AECC73 /* temp.swift in Sources */,
+				D89B8EDA2976E77200A39F89 /* ModifyDeleteScrollView.swift in Sources */,
 				D88164DA296B7543005E1974 /* ExecEventView.swift in Sources */,
 				D88164D62969748F005E1974 /* TaskModel.swift in Sources */,
 				D884E85F2972658D00EE1F10 /* TaskListComponentView.swift in Sources */,
+				D89B8ED42976B30300A39F89 /* CreateTaskView.swift in Sources */,
 				D88164D82969752B005E1974 /* ReadViewModel.swift in Sources */,
 				D898223E2962B13700AECC73 /* ExecLogin.swift in Sources */,
 			);

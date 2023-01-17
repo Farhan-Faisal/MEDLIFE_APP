@@ -14,6 +14,30 @@ struct LoginCredentials: Identifiable, Codable, Hashable{
     var password: String
 }
 
+final class WriteEvent: ObservableObject {
+    
+    var event: EventModel
+    var ref = Database.database().reference()
+    
+    init(event: EventModel) {
+        self.event = event
+    }
+    
+    func write(){
+        let child = ref.child("Events").child(event.id)
+        
+        do {
+            let data = try JSONEncoder().encode(self.event)
+            let json = try JSONSerialization.jsonObject(with: data)
+            child.setValue(json)
+        } catch {
+          print("an error occurred", error)
+        }
+    }
+}
+
+
+
 final class WriteExec: ObservableObject {
     
     var exec: Executive
@@ -143,8 +167,8 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
     }
     
     func generateExecList(keys: [String], completion: @escaping (Bool) -> ()){
+        
         for item in keys{
-            
             let child = ref.child("Executive").child(item)
             child.observeSingleEvent(of: .value){[weak self] snapshot in
                 
@@ -176,9 +200,10 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
         completion(flag)
     }
     
+    
     func generateTaskList(execID: String, keys: [String], completion: @escaping (Bool) -> ()){
+        
         for item in keys{
-            
             let child = ref.child("Tasks").child(execID).child(item)
             child.observeSingleEvent(of: .value){[weak self] snapshot in
                 
@@ -212,6 +237,7 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
     
     
     func generateLoginList(keys: [String], completion: @escaping (Bool) -> ()){
+        
         for item in keys{
             let child = ref.child("Login/\(item)")
             child.observeSingleEvent(of: .value){[weak self] snapshot in
@@ -227,10 +253,7 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
                 do {
                     let loginData = try JSONSerialization.data(withJSONObject: json)
                     let temp = try JSONDecoder().decode(LoginCredentials.self, from: loginData)
-                    
-                    print(temp.UTorID)
-                    print(temp.password)
-                    
+
                     if self.login.contains(temp) == false{
                         self.login.append(temp)
                     }
@@ -246,6 +269,5 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
         }
         completion(flag)
     }
-    
-    
+
 }

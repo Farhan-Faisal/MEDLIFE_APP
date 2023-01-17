@@ -24,12 +24,14 @@ struct ExecLogin: View {
             
             TextField("UTorID",
                       text: $UTorID)
+                .autocapitalization(.none)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 300, height: 50, alignment: .center)
                 .border(.black)
             
             TextField("Password",
                       text: $password)
+                .autocapitalization(.none)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 300, height: 50, alignment: .center)
                 .border(.black)

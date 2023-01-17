@@ -26,9 +26,12 @@ struct ExecHomeView: View {
                         
             ExecScrollView()
             .tabItem({
-                Label("Assign", systemImage: "note")
+                Label("Execs", systemImage: "note")
             })
         }
+        .navigationBarTitle("Executive List")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

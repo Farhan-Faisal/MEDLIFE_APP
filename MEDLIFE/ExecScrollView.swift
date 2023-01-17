@@ -15,7 +15,7 @@ struct ExecScrollView: View {
         NavigationView{
             
             List(readViewModel.execList, id: \.self){exec in
-                NavigationLink(destination: ExecListComponetView(exec: exec)) {
+                NavigationLink(destination: ModifyDeleteAssignView(exec: exec)) {
                     ExecListComponetView(exec: exec)
                 }
             }
@@ -30,8 +30,15 @@ struct ExecScrollView: View {
             }
             .navigationBarTitle("Executive List")
             .navigationBarTitleDisplayMode(.inline)
-            .font(.system(size: 10))
+            .toolbar { // <2>
+                        ToolbarItem(placement: .principal) { // <3>
+                            VStack {
+                                Text("Executive List").font(.headline)
+                                    .font(.system(size: 10))
+                            }
+                        }
+                    }
         }
-        .background(Color.white)
+        .background(Color.black)
     }
 }
