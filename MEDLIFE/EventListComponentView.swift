@@ -34,7 +34,7 @@ struct EventListComponentView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 17))
             }
-            .frame(width: 165, height: 70, alignment: .leading)
+            .frame(width: 200, height: 70, alignment: .leading)
             .padding()
             
             Spacer()
@@ -44,6 +44,7 @@ struct EventListComponentView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 20))
             }
+            .frame(width: 80, height: 70, alignment: .leading)
             
             Spacer()
 //            VStack(alignment: .leading) {

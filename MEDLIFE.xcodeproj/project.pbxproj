@@ -156,61 +156,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D83B1CD32976F5A100BAF1C1 /* ModifyAssignTaskViews */ = {
-			isa = PBXGroup;
-			children = (
-				D89B8ED32976B30300A39F89 /* CreateTaskView.swift */,
-				D89B8ED92976E77200A39F89 /* ExecTaskScrollView.swift */,
-				D89B8ED52976DB7A00A39F89 /* ExecTaskComponentView.swift */,
-				D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */,
-			);
-			path = ModifyAssignTaskViews;
-			sourceTree = "<group>";
-		};
-		D83B1CD42976F62600BAF1C1 /* EventViews */ = {
-			isa = PBXGroup;
-			children = (
-				D89B8EDD2976F03100A39F89 /* PublishEventView.swift */,
-				D886A5582973F0D7007395A0 /* EventListComponentView.swift */,
-				D886A55A2973F0F7007395A0 /* EventModel.swift */,
-				D88164D9296B7543005E1974 /* ExecEventView.swift */,
-			);
-			path = EventViews;
-			sourceTree = "<group>";
-		};
-		D83B1CD52976F64600BAF1C1 /* TaskDisplayViews */ = {
-			isa = PBXGroup;
-			children = (
-				D88A768129BD22A700F48D0A /* UploadPictureView.swift */,
-				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
-				D88164D52969748F005E1974 /* TaskModel.swift */,
-				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
-				D84D49C529C7A80300889294 /* TaskProofView.swift */,
-			);
-			path = TaskDisplayViews;
-			sourceTree = "<group>";
-		};
-		D8643392297A1251006786B2 /* ExecViews */ = {
-			isa = PBXGroup;
-			children = (
-				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
-				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
-				D898223D2962B13700AECC73 /* ExecLogin.swift */,
-				D88164D32969734A005E1974 /* ExecModel.swift */,
-				D8258F722971AE7C00D86113 /* ExecScrollView.swift */,
-			);
-			path = ExecViews;
-			sourceTree = "<group>";
-		};
-		D8643393297A1273006786B2 /* SettingsViews */ = {
-			isa = PBXGroup;
-			children = (
-				D864338C2979D618006786B2 /* ExecCreationView.swift */,
-				D8643390297A10E0006786B2 /* SettingsView.swift */,
-			);
-			path = SettingsViews;
-			sourceTree = "<group>";
-		};
 		D88A40A9295F42EE00AC15E1 = {
 			isa = PBXGroup;
 			children = (
@@ -236,17 +181,32 @@
 			children = (
 				D88A40B9295F42EF00AC15E1 /* Assets.xcassets */,
 				D88A40B7295F42EE00AC15E1 /* ContentView.swift */,
-				D83B1CD42976F62600BAF1C1 /* EventViews */,
-				D8643392297A1251006786B2 /* ExecViews */,
 				D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */,
 				D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */,
 				D898223F2962B45E00AECC73 /* MemberLogin.swift */,
-				D83B1CD32976F5A100BAF1C1 /* ModifyAssignTaskViews */,
+				D89B8ED32976B30300A39F89 /* CreateTaskView.swift */,
+				D89B8EDD2976F03100A39F89 /* PublishEventView.swift */,
+				D886A5582973F0D7007395A0 /* EventListComponentView.swift */,
+				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
+				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
+				D898223D2962B13700AECC73 /* ExecLogin.swift */,
+				D88164D32969734A005E1974 /* ExecModel.swift */,
+				D8258F722971AE7C00D86113 /* ExecScrollView.swift */,
+				D886A55A2973F0F7007395A0 /* EventModel.swift */,
+				D88164D9296B7543005E1974 /* ExecEventView.swift */,
+				D89B8ED92976E77200A39F89 /* ExecTaskScrollView.swift */,
+				D864338C2979D618006786B2 /* ExecCreationView.swift */,
+				D8643390297A10E0006786B2 /* SettingsView.swift */,
+				D89B8ED52976DB7A00A39F89 /* ExecTaskComponentView.swift */,
+				D88A768129BD22A700F48D0A /* UploadPictureView.swift */,
+				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
+				D88164D52969748F005E1974 /* TaskModel.swift */,
+				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+				D84D49C529C7A80300889294 /* TaskProofView.swift */,
+				D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */,
 				D88A40DF295F433600AC15E1 /* OpeningPage.swift */,
 				D88A40BB295F42EF00AC15E1 /* Preview Content */,
 				D88164D72969752B005E1974 /* ReadViewModel.swift */,
-				D8643393297A1273006786B2 /* SettingsViews */,
-				D83B1CD52976F64600BAF1C1 /* TaskDisplayViews */,
 				D898223B2962AFED00AECC73 /* temp.swift */,
 				D88A767E29BC1BD300F48D0A /* SwiftUIView.swift */,
 				D88A768029BC21F600F48D0A /* Article.md */,
