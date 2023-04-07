@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct Task: Identifiable, Codable, Hashable {
+struct TaskModel: Identifiable, Codable, Hashable {
     var id: String
     var execID: String
     var name: String
     var deadline: Date
+    var description: String
     var completed: Bool
     var approved: Bool
 }

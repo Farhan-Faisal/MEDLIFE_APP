@@ -25,9 +25,7 @@ struct TaskScrollView: View {
                     }
                 }
             }
-            .navigationBarTitle("Task List")
-            .navigationBarTitleDisplayMode(.inline)
-            .font(.system(size: 18))
+            .navigationBarTitle("Pending Tasks")
         }
 
     }

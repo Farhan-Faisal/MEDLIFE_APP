@@ -22,12 +22,14 @@ struct MemberLogin: View {
             TextField("Email",
                       text: $email)
                 .textFieldStyle(.roundedBorder)
+                .autocapitalization(.none)
                 .frame(width: 300, height: 50, alignment: .center)
                 .border(.black)
             
             TextField("Password",
                       text: $password)
                 .textFieldStyle(.roundedBorder)
+                .autocapitalization(.none)
                 .frame(width: 300, height: 50, alignment: .center)
                 .border(.black)
             

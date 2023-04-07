@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ModifyTaskView: View {
 
-    @State var task: Task
+    @State var task: TaskModel
     @State private var taskName: String = ""
     @State private var deadline = Date.now
+    @State private var description: String = ""
     
     @State private var showingAlert = false
     @State private var taskModified = false
@@ -22,6 +23,7 @@ struct ModifyTaskView: View {
             TextField("Task Name",
                       text: $taskName)
             .textFieldStyle(.roundedBorder)
+            .autocapitalization(.none)
             .font(.custom(
                     "FontNameRound",
                     fixedSize: 20))
@@ -36,6 +38,12 @@ struct ModifyTaskView: View {
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 2, trailing: 10))
             .border(.black)
             
+            TextField("Task Description", text: $description,
+                      axis: .vertical)
+            .frame(width: 280, height: 200, alignment: .center)
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 2, trailing: 10))
+            .border(.black)
+            
             VStack {
                 Button {
                     if taskName == "" {
@@ -47,14 +55,14 @@ struct ModifyTaskView: View {
                         let tempRef = ReadFromDatabase().ref.child("Tasks").child(task.execID).child(task.id)
                         tempRef.removeValue()
                         
-                        let temp = Task(id: task.id, execID: task.execID, name: taskName, deadline: deadline, completed: false, approved: false)
+                        let temp = TaskModel(id: task.id, execID: task.execID, name: taskName, deadline: deadline, description: description, completed: false, approved: false)
                         let w = WriteTask(task: temp)
                         w.write()
                         
                         taskModified = true
                     }
                 } label: {
-                    Text("Create and Assign")
+                    Text("Modify Task")
                 }
                 .alert("Please complete all fields", isPresented: $showingAlert) {
                     Button("OK", role: .cancel) {
@@ -78,7 +86,7 @@ struct ModifyTaskView: View {
 
 struct ModifyTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        let m = Task(id: "test123", execID: "exec123", name: "TestTask", deadline: Date(), completed: false, approved: false)
+        let m = TaskModel(id: "test123", execID: "exec123", name: "TestTask", deadline: Date(), description: "knknkn", completed: false, approved: false)
         ModifyTaskView(task: m)
     }
 }

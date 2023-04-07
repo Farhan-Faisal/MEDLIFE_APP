@@ -14,6 +14,7 @@ struct LoginCredentials: Identifiable, Codable, Hashable{
     var password: String
 }
 
+
 final class WriteEvent: ObservableObject {
     
     var event: EventModel
@@ -34,8 +35,32 @@ final class WriteEvent: ObservableObject {
           print("an error occurred", error)
         }
     }
-}
+    
+    func updateAttendance(ExecID: String){
+        let attendanceChild = ref.child("Attendance").child(event.id).child(ExecID)
+        let eventChild =  ref.child("Events").child(self.event.id)
+        let temp = ReadFromDatabase()
 
+        attendanceChild.setValue(ExecID)
+
+        temp.getAllChildKeys(childKey: "Attendance/\(self.event.id)"){complete in
+            let newAttendance = temp.fetchedKeys.count
+            self.event.attendance = newAttendance
+
+            do {
+                let newEventData = try JSONEncoder().encode(self.event)
+                let eventJson = try JSONSerialization.jsonObject(with: newEventData)
+                eventChild.setValue(eventJson)
+            }
+            catch{
+                print("an error occurred", error)
+            }
+
+        }
+
+        
+    }
+}
 
 
 final class WriteExec: ObservableObject {
@@ -58,14 +83,28 @@ final class WriteExec: ObservableObject {
           print("an error occurred", error)
         }
     }
+    
+    func writeLogin(password: String){
+        let child = ref.child("Login").child(exec.id)
+        let login = LoginCredentials(id: self.exec.id, UTorID: self.exec.id, password: password)
+        
+        do {
+            let data = try JSONEncoder().encode(login)
+            let json = try JSONSerialization.jsonObject(with: data)
+            child.setValue(json)
+        } catch {
+          print("an error occurred", error)
+        }
+    }
+    
 }
 
 
 final class WriteTask: ObservableObject {
-    var task: Task
+    var task: TaskModel
     var ref = Database.database().reference()
     
-    init(task: Task) {
+    init(task: TaskModel) {
         self.task = task
     }
     
@@ -77,7 +116,7 @@ final class WriteTask: ObservableObject {
             let json = try JSONSerialization.jsonObject(with: data)
             child.setValue(json)
         } catch {
-          print("an error occurred", error)
+            print("an error occurred", error)
         }
     }
 }
@@ -95,22 +134,63 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
     var exec: Executive? = nil
     
     @Published
+    var singleLogin: LoginCredentials? = nil
+    
+    @Published
     var login: [LoginCredentials] = [LoginCredentials]()
         
     @Published
-    var taskList: [Task] = [Task]()
+    var taskList: [TaskModel] = [TaskModel]()
     
     @Published
     var execList: [Executive] = [Executive]()
     
     @Published
+    var eventList: [EventModel] = [EventModel]()
+    
+    @Published
     var fetchedKeys: [String] = [String]()
 
     
-    func readValue(childKey: String){
+    func readValue(childKey: String, completion: @escaping (Bool) -> ()){
         let child = ref.child(childKey)
         child.observeSingleEvent(of: .value){snapshot in
             self.value = snapshot.value as? String
+        }
+        
+        var flag = false
+        if (self.value != nil){
+            flag = true
+        }
+        completion(flag)
+    }
+    
+    func fetchSingleLoginCred(childKey: String, completion: @escaping (Bool) -> ()){
+        let child = ref.child("Login").child(childKey)
+        
+        child.observeSingleEvent(of: .value){[weak self] snapshot in
+            completion(!snapshot.exists())
+            
+            guard
+                let self = self,
+                var json = snapshot.value as? [String: Any]
+            else {
+                return
+            }
+            
+            json["id"] = snapshot.key
+            do {
+                let loginData = try JSONSerialization.data(withJSONObject: json)
+                self.singleLogin = try JSONDecoder().decode(LoginCredentials.self, from: loginData)
+            } catch {
+                print("an error occurred", error)
+            }
+            
+            var flag = false
+            if (self.singleLogin != nil){
+                flag = true
+            }
+            completion(flag)
         }
     }
     
@@ -203,6 +283,8 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
     
     func generateTaskList(execID: String, keys: [String], completion: @escaping (Bool) -> ()){
         
+        self.taskList = [TaskModel]()
+        
         for item in keys{
             let child = ref.child("Tasks").child(execID).child(item)
             child.observeSingleEvent(of: .value){[weak self] snapshot in
@@ -217,7 +299,7 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
                 json["id"] = snapshot.key
                 do {
                     let taskData = try JSONSerialization.data(withJSONObject: json)
-                    let temp = try JSONDecoder().decode(Task.self, from: taskData)
+                    let temp = try JSONDecoder().decode(TaskModel.self, from: taskData)
                     
                     if self.taskList.contains(temp) == false{
                         self.taskList.append(temp)
@@ -269,5 +351,42 @@ final class ReadFromDatabase: ObservableObject, Identifiable {
         }
         completion(flag)
     }
+    
+    
+    func generateEventList(keys: [String], completion: @escaping (Bool) -> ()){
+        
+        for item in keys{
+            let child = ref.child("Events").child(item)
+            child.observeSingleEvent(of: .value){[weak self] snapshot in
+                
+                guard
+                    let self = self,
+                    var json = snapshot.value as? [String: Any]
+                else {
+                    return
+                }
+                
+                json["id"] = snapshot.key
+                do {
+                    let eventData = try JSONSerialization.data(withJSONObject: json)
+                    let temp = try JSONDecoder().decode(EventModel.self, from: eventData)
+                    
+                    if self.eventList.contains(temp) == false{
+                        self.eventList.append(temp)
+                    }
+                } catch {
+                    print("an error occurred", error)
+                }
+            }
+        }
+        
+        var flag = false
+        if (self.eventList.count == self.fetchedKeys.count){
+            flag = true
+        }
+        completion(flag)
+    }
+    
+    
 
 }

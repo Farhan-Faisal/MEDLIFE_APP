@@ -17,6 +17,7 @@ struct CreateTaskView: View {
     @State private var taskName: String = ""
     @State private var taskID: String = ""
     @State private var deadline = Date.now
+    @State private var description: String = ""
     
     @State private var showingAlert = false
     @State private var taskAssigned = false
@@ -27,6 +28,7 @@ struct CreateTaskView: View {
             TextField("Task Name",
                       text: $taskName)
             .textFieldStyle(.roundedBorder)
+            .autocapitalization(.none)
             .font(.custom(
                     "FontNameRound",
                     fixedSize: 20))
@@ -36,6 +38,7 @@ struct CreateTaskView: View {
             
             TextField("Task ID",
                       text: $taskID)
+            .autocapitalization(.none)
             .textFieldStyle(.roundedBorder)
             .frame(width: 300, height: 50, alignment: .center)
             .border(.black)
@@ -44,6 +47,12 @@ struct CreateTaskView: View {
                 Text("Deadline")
             }
             .frame(width: 280, height: 50, alignment: .center)
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 2, trailing: 10))
+            .border(.black)
+            
+            TextField("Task Description", text: $description,
+                      axis: .vertical)
+            .frame(width: 280, height: 200, alignment: .center)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 2, trailing: 10))
             .border(.black)
             
@@ -57,7 +66,7 @@ struct CreateTaskView: View {
                         showingAlert = true
                     }
                     else {
-                        let temp = Task(id: taskID, execID: exec.id, name: taskName, deadline: deadline, completed: false, approved: false)
+                        let temp = TaskModel(id: taskID, execID: exec.id, name: taskName, deadline: deadline, description: description, completed: false, approved: false)
                         
                         let w = WriteTask(task: temp)
                         w.write()

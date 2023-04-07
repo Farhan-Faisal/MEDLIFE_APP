@@ -12,13 +12,15 @@ struct ExecLogin: View {
     @ObservedObject var readViewModel = ReadFromDatabase()
     @State private var UTorID: String = ""
     @State private var password: String = ""
+    
     @State private var goesToDetail: Bool = false
+    @State private var inCorrectLogin: Bool = false
     
     var body: some View {
         
         VStack{
             Text("EXEC LOGIN")
-                .font(.system(size: 30))
+                .font(.custom("SF Pro", size: 24))
                 .fontWeight(.bold)
                 .padding()
             
@@ -26,33 +28,41 @@ struct ExecLogin: View {
                       text: $UTorID)
                 .autocapitalization(.none)
                 .textFieldStyle(.roundedBorder)
-                .frame(width: 300, height: 50, alignment: .center)
+                .frame(width: 300, height: 40, alignment: .center)
                 .border(.black)
             
-            TextField("Password",
+            SecureField("Password",
                       text: $password)
                 .autocapitalization(.none)
                 .textFieldStyle(.roundedBorder)
-                .frame(width: 300, height: 50, alignment: .center)
+                .frame(width: 300, height: 40, alignment: .center)
                 .border(.black)
             
             VStack {
                 Button {
                     for item in readViewModel.login{
-                        if item.password == self.password {
-                            if item.UTorID == self.UTorID {
+                        if item.UTorID == self.UTorID {
+                            if item.password == self.password {
                                 goesToDetail = true
                             }
                         }
                     }
+                    
+                    if goesToDetail == false {
+                        inCorrectLogin = true
+                    }
                 } label: {
                     Text("LOGIN")
+                        .font(.custom("SF Pro", size: 18))
                 }
-                .onTapGesture {
+                .alert("Incorrect Login Credentials", isPresented: $inCorrectLogin) {
+                    Button("Try again", role: .cancel) {
+                        inCorrectLogin = false
+                    }
                 }
             }
             .navigationDestination(isPresented: $goesToDetail) {
-                ExecHomeView()
+                ExecHomeView(UTorID: UTorID)
             }
             .buttonStyle(RoundedRectangleButtonStyle())
             
@@ -64,6 +74,8 @@ struct ExecLogin: View {
                 }
             }
         }
+        
+        
     }
 }
 

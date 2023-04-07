@@ -12,11 +12,11 @@ struct OpeningPage: View {
     @ObservedObject var readViewModel = ReadFromDatabase()
     
     @State private var goesToDetail: Bool = false
+    @State private var memberLogin: Bool = false
     
     var body: some View {
        
         NavigationStack {
-
             VStack{
                 Image("MedlifeLogo")
                     .resizable()
@@ -25,16 +25,14 @@ struct OpeningPage: View {
             .frame(width: 350, height: 300, alignment: .top)
             
             Text("MEDLIFE UTSC")
-                .font(.system(size: 30))
-                .fontWeight(.bold)
+                .font(.custom("SF Pro", size: 24))
                 
             
-            VStack {
-                Button {
-                    goesToDetail = true
-                } label: {
-                    Text("EXEC LOGIN")
-                }
+            Button {
+                goesToDetail = true
+            } label: {
+                Text("EXEC LOGIN")
+                    .font(.custom("SF Pro", size: 18))
             }
             .navigationDestination(isPresented: $goesToDetail) {
                 ExecLogin()
@@ -42,17 +40,20 @@ struct OpeningPage: View {
             .buttonStyle(RoundedRectangleButtonStyle())
                 
             
-            VStack {
-                Button {
-                    goesToDetail = true
-                } label: {
-                    Text("MEMBER LOGIN")
+            Button {
+                memberLogin = true
+            } label: {
+                Text("MEMBER LOGIN")
+                    .font(.custom("SF Pro", size: 18))
+            }
+            .alert("Feature Coming Soon!", isPresented: $memberLogin) {
+                Button("Okay", role: .cancel) {
+                    memberLogin = false
                 }
             }
-            .navigationDestination(isPresented: $goesToDetail) {
-                ExecLogin()
-            }
             .buttonStyle(RoundedRectangleButtonStyle())
+            
+            
         }
 
     }
@@ -62,20 +63,4 @@ struct OpeningPage_Previews: PreviewProvider {
     static var previews: some View {
         OpeningPage()
     }
-}
-
-struct RoundedRectangleButtonStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    HStack {
-      Spacer()
-      configuration.label.foregroundColor(.white)
-      Spacer()
-    }
-    .font(.system(size: 25))
-    .fontWeight(.medium)
-    .foregroundColor(.white)
-    .frame(width: 300, height: 40, alignment: .center)
-    .background(.black)
-    .padding(15)
-  }
 }

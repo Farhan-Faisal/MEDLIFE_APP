@@ -12,4 +12,6 @@ struct EventModel: Identifiable, Codable, Hashable {
     var name: String
     var eventDate: Date
     var attendance: Int
+    var location: String
+    var description: String
 }

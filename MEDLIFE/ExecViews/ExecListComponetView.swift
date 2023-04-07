@@ -17,7 +17,7 @@ struct ExecListComponetView: View {
                     .foregroundColor(.black)
                     .font(.system(size: 20))
                 
-                Text("- \(exec.position)")
+                Text("\(exec.position)")
                     .foregroundColor(.black)
                     .font(.system(size: 15))
             }

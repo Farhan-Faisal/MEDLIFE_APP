@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D8258F732971AE7C00D86113 /* ExecScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8258F722971AE7C00D86113 /* ExecScrollView.swift */; };
+		D84D49C629C7A80300889294 /* TaskProofView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84D49C529C7A80300889294 /* TaskProofView.swift */; };
+		D84D49C829C8538200889294 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84D49C729C8538200889294 /* FileStorage.swift */; };
 		D85FC461296380C70095D663 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D85FC460296380C70095D663 /* FirebaseAnalytics */; };
 		D85FC463296380C70095D663 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D85FC462296380C70095D663 /* FirebaseAnalyticsOnDeviceConversion */; };
 		D85FC465296380C70095D663 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D85FC464296380C70095D663 /* FirebaseAnalyticsSwift */; };
@@ -22,6 +24,8 @@
 		D85FC477296380C70095D663 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = D85FC476296380C70095D663 /* FirebasePerformance */; };
 		D85FC479296380C70095D663 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D85FC478296380C70095D663 /* FirebaseStorage */; };
 		D85FC47B296380C70095D663 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D85FC47A296380C70095D663 /* FirebaseStorageCombine-Community */; };
+		D864338D2979D618006786B2 /* ExecCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D864338C2979D618006786B2 /* ExecCreationView.swift */; };
+		D8643391297A10E0006786B2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8643390297A10E0006786B2 /* SettingsView.swift */; };
 		D88164D42969734A005E1974 /* ExecModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88164D32969734A005E1974 /* ExecModel.swift */; };
 		D88164D62969748F005E1974 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88164D52969748F005E1974 /* TaskModel.swift */; };
 		D88164D82969752B005E1974 /* ReadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88164D72969752B005E1974 /* ReadViewModel.swift */; };
@@ -40,16 +44,18 @@
 		D88A40D1295F42F000AC15E1 /* MEDLIFEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A40D0295F42F000AC15E1 /* MEDLIFEUITests.swift */; };
 		D88A40D3295F42F000AC15E1 /* MEDLIFEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A40D2295F42F000AC15E1 /* MEDLIFEUITestsLaunchTests.swift */; };
 		D88A40E0295F433600AC15E1 /* OpeningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A40DF295F433600AC15E1 /* OpeningPage.swift */; };
+		D88A767F29BC1BD300F48D0A /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A767E29BC1BD300F48D0A /* SwiftUIView.swift */; };
+		D88A768229BD22A700F48D0A /* UploadPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88A768129BD22A700F48D0A /* UploadPictureView.swift */; };
 		D898223C2962AFED00AECC73 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898223B2962AFED00AECC73 /* temp.swift */; };
 		D898223E2962B13700AECC73 /* ExecLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898223D2962B13700AECC73 /* ExecLogin.swift */; };
 		D89822402962B45E00AECC73 /* MemberLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898223F2962B45E00AECC73 /* MemberLogin.swift */; };
 		D89B8ED42976B30300A39F89 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED32976B30300A39F89 /* CreateTaskView.swift */; };
-		D89B8ED62976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */; };
+		D89B8ED62976DB7A00A39F89 /* ExecTaskComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED52976DB7A00A39F89 /* ExecTaskComponentView.swift */; };
 		D89B8ED82976E55400A39F89 /* ModifyTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */; };
-		D89B8EDA2976E77200A39F89 /* ModifyDeleteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */; };
-		D89B8EDC2976E9BD00A39F89 /* ModifyDeleteAssignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */; };
+		D89B8EDA2976E77200A39F89 /* ExecTaskScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8ED92976E77200A39F89 /* ExecTaskScrollView.swift */; };
 		D89B8EDE2976F03100A39F89 /* PublishEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89B8EDD2976F03100A39F89 /* PublishEventView.swift */; };
 		D8EFDA91296EC37E00452A57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */; };
+		D8FF129A29DBA36D00F48466 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF129929DBA36C00F48466 /* ChangePasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,10 @@
 
 /* Begin PBXFileReference section */
 		D8258F722971AE7C00D86113 /* ExecScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecScrollView.swift; sourceTree = "<group>"; };
+		D84D49C529C7A80300889294 /* TaskProofView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProofView.swift; sourceTree = "<group>"; };
+		D84D49C729C8538200889294 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		D864338C2979D618006786B2 /* ExecCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecCreationView.swift; sourceTree = "<group>"; };
+		D8643390297A10E0006786B2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D88164D32969734A005E1974 /* ExecModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecModel.swift; sourceTree = "<group>"; };
 		D88164D52969748F005E1974 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		D88164D72969752B005E1974 /* ReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewModel.swift; sourceTree = "<group>"; };
@@ -92,16 +102,19 @@
 		D88A40D0295F42F000AC15E1 /* MEDLIFEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEDLIFEUITests.swift; sourceTree = "<group>"; };
 		D88A40D2295F42F000AC15E1 /* MEDLIFEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEDLIFEUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D88A40DF295F433600AC15E1 /* OpeningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningPage.swift; sourceTree = "<group>"; };
+		D88A767E29BC1BD300F48D0A /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		D88A768029BC21F600F48D0A /* Article.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Article.md; sourceTree = "<group>"; };
+		D88A768129BD22A700F48D0A /* UploadPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPictureView.swift; sourceTree = "<group>"; };
 		D898223B2962AFED00AECC73 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		D898223D2962B13700AECC73 /* ExecLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecLogin.swift; sourceTree = "<group>"; };
 		D898223F2962B45E00AECC73 /* MemberLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLogin.swift; sourceTree = "<group>"; };
 		D89B8ED32976B30300A39F89 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
-		D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeleteTaskComponentView.swift; sourceTree = "<group>"; };
+		D89B8ED52976DB7A00A39F89 /* ExecTaskComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecTaskComponentView.swift; sourceTree = "<group>"; };
 		D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyTaskView.swift; sourceTree = "<group>"; };
-		D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeleteScrollView.swift; sourceTree = "<group>"; };
-		D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeleteAssignView.swift; sourceTree = "<group>"; };
+		D89B8ED92976E77200A39F89 /* ExecTaskScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecTaskScrollView.swift; sourceTree = "<group>"; };
 		D89B8EDD2976F03100A39F89 /* PublishEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishEventView.swift; sourceTree = "<group>"; };
 		D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8FF129929DBA36C00F48466 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				D89B8ED32976B30300A39F89 /* CreateTaskView.swift */,
-				D89B8EDB2976E9BD00A39F89 /* ModifyDeleteAssignView.swift */,
-				D89B8ED92976E77200A39F89 /* ModifyDeleteScrollView.swift */,
-				D89B8ED52976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift */,
+				D89B8ED92976E77200A39F89 /* ExecTaskScrollView.swift */,
+				D89B8ED52976DB7A00A39F89 /* ExecTaskComponentView.swift */,
 				D89B8ED72976E55400A39F89 /* ModifyTaskView.swift */,
 			);
 			path = ModifyAssignTaskViews;
@@ -169,11 +181,34 @@
 		D83B1CD52976F64600BAF1C1 /* TaskDisplayViews */ = {
 			isa = PBXGroup;
 			children = (
+				D88A768129BD22A700F48D0A /* UploadPictureView.swift */,
 				D884E85E2972658D00EE1F10 /* TaskListComponentView.swift */,
 				D88164D52969748F005E1974 /* TaskModel.swift */,
 				D884E86029726EEB00EE1F10 /* TaskScrollView.swift */,
+				D84D49C529C7A80300889294 /* TaskProofView.swift */,
 			);
 			path = TaskDisplayViews;
+			sourceTree = "<group>";
+		};
+		D8643392297A1251006786B2 /* ExecViews */ = {
+			isa = PBXGroup;
+			children = (
+				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
+				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
+				D898223D2962B13700AECC73 /* ExecLogin.swift */,
+				D88164D32969734A005E1974 /* ExecModel.swift */,
+				D8258F722971AE7C00D86113 /* ExecScrollView.swift */,
+			);
+			path = ExecViews;
+			sourceTree = "<group>";
+		};
+		D8643393297A1273006786B2 /* SettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				D864338C2979D618006786B2 /* ExecCreationView.swift */,
+				D8643390297A10E0006786B2 /* SettingsView.swift */,
+			);
+			path = SettingsViews;
 			sourceTree = "<group>";
 		};
 		D88A40A9295F42EE00AC15E1 = {
@@ -202,11 +237,7 @@
 				D88A40B9295F42EF00AC15E1 /* Assets.xcassets */,
 				D88A40B7295F42EE00AC15E1 /* ContentView.swift */,
 				D83B1CD42976F62600BAF1C1 /* EventViews */,
-				D88164DB296B7B8F005E1974 /* ExecHomeView.swift */,
-				D884E85C2972556E00EE1F10 /* ExecListComponetView.swift */,
-				D898223D2962B13700AECC73 /* ExecLogin.swift */,
-				D88164D32969734A005E1974 /* ExecModel.swift */,
-				D8258F722971AE7C00D86113 /* ExecScrollView.swift */,
+				D8643392297A1251006786B2 /* ExecViews */,
 				D8EFDA90296EC37E00452A57 /* GoogleService-Info.plist */,
 				D88A40B5295F42EE00AC15E1 /* MEDLIFEApp.swift */,
 				D898223F2962B45E00AECC73 /* MemberLogin.swift */,
@@ -214,8 +245,13 @@
 				D88A40DF295F433600AC15E1 /* OpeningPage.swift */,
 				D88A40BB295F42EF00AC15E1 /* Preview Content */,
 				D88164D72969752B005E1974 /* ReadViewModel.swift */,
+				D8643393297A1273006786B2 /* SettingsViews */,
 				D83B1CD52976F64600BAF1C1 /* TaskDisplayViews */,
 				D898223B2962AFED00AECC73 /* temp.swift */,
+				D88A767E29BC1BD300F48D0A /* SwiftUIView.swift */,
+				D88A768029BC21F600F48D0A /* Article.md */,
+				D84D49C729C8538200889294 /* FileStorage.swift */,
+				D8FF129929DBA36C00F48466 /* ChangePasswordView.swift */,
 			);
 			path = MEDLIFE;
 			sourceTree = "<group>";
@@ -398,28 +434,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88A767F29BC1BD300F48D0A /* SwiftUIView.swift in Sources */,
 				D884E85D2972556E00EE1F10 /* ExecListComponetView.swift in Sources */,
 				D89B8ED82976E55400A39F89 /* ModifyTaskView.swift in Sources */,
 				D886A5592973F0D7007395A0 /* EventListComponentView.swift in Sources */,
 				D89B8EDE2976F03100A39F89 /* PublishEventView.swift in Sources */,
-				D89B8ED62976DB7A00A39F89 /* ModifyDeleteTaskComponentView.swift in Sources */,
+				D84D49C829C8538200889294 /* FileStorage.swift in Sources */,
+				D89B8ED62976DB7A00A39F89 /* ExecTaskComponentView.swift in Sources */,
+				D8FF129A29DBA36D00F48466 /* ChangePasswordView.swift in Sources */,
 				D88164D42969734A005E1974 /* ExecModel.swift in Sources */,
 				D88164DC296B7B8F005E1974 /* ExecHomeView.swift in Sources */,
 				D884E86129726EEB00EE1F10 /* TaskScrollView.swift in Sources */,
 				D886A55B2973F0F7007395A0 /* EventModel.swift in Sources */,
 				D8258F732971AE7C00D86113 /* ExecScrollView.swift in Sources */,
 				D88A40B8295F42EE00AC15E1 /* ContentView.swift in Sources */,
-				D89B8EDC2976E9BD00A39F89 /* ModifyDeleteAssignView.swift in Sources */,
 				D88A40E0295F433600AC15E1 /* OpeningPage.swift in Sources */,
 				D88A40B6295F42EE00AC15E1 /* MEDLIFEApp.swift in Sources */,
+				D864338D2979D618006786B2 /* ExecCreationView.swift in Sources */,
+				D8643391297A10E0006786B2 /* SettingsView.swift in Sources */,
 				D89822402962B45E00AECC73 /* MemberLogin.swift in Sources */,
 				D898223C2962AFED00AECC73 /* temp.swift in Sources */,
-				D89B8EDA2976E77200A39F89 /* ModifyDeleteScrollView.swift in Sources */,
+				D88A768229BD22A700F48D0A /* UploadPictureView.swift in Sources */,
+				D89B8EDA2976E77200A39F89 /* ExecTaskScrollView.swift in Sources */,
 				D88164DA296B7543005E1974 /* ExecEventView.swift in Sources */,
 				D88164D62969748F005E1974 /* TaskModel.swift in Sources */,
 				D884E85F2972658D00EE1F10 /* TaskListComponentView.swift in Sources */,
 				D89B8ED42976B30300A39F89 /* CreateTaskView.swift in Sources */,
 				D88164D82969752B005E1974 /* ReadViewModel.swift in Sources */,
+				D84D49C629C7A80300889294 /* TaskProofView.swift in Sources */,
 				D898223E2962B13700AECC73 /* ExecLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
