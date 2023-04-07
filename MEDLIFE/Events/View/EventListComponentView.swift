@@ -69,20 +69,3 @@ struct EventListComponentView_Previews: PreviewProvider {
         EventListComponentView(event: m, ExecID: "faisalf4")
     }
 }
-
-
-struct JoiningStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    HStack {
-      Spacer()
-      configuration.label.foregroundColor(.white)
-      Spacer()
-    }
-    .font(.system(size: 16))
-    .fontWeight(.medium)
-    .foregroundColor(.white)
-    .frame(width: 80, height: 25, alignment: .center)
-    .background(.black)
-    .padding(5)
-  }
-}

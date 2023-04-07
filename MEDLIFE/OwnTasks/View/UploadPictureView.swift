@@ -95,7 +95,6 @@ struct UploadPictureView: View {
 }
 
 struct UploadPictureView_Previews: PreviewProvider {
-
     static var previews: some View {
         let m = TaskModel(id: "test123", execID: "exec123", name: "TestTask", deadline: Date(), description: "kjkjk", completed: false, approved: false)
         UploadPictureView(task: m)

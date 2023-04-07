@@ -73,20 +73,3 @@ struct ExecTaskComponentView_Previews: PreviewProvider {
     }
 }
 
-
-struct ModifyButtonStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    HStack {
-      Spacer()
-      configuration.label.foregroundColor(.white)
-      Spacer()
-    }
-    .font(.system(size: 16))
-    .fontWeight(.medium)
-    .foregroundColor(.white)
-    .frame(width: 150, height: 25, alignment: .center)
-    .background(.black)
-    .padding(5)
-  }
-}
-

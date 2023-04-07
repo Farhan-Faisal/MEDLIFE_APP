@@ -72,10 +72,6 @@ public class StorageManager: ObservableObject {
                 
                 
             }
-            
         }
-        
     }
-    
-    
 }
