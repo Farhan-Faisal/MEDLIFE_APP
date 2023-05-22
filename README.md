@@ -18,6 +18,8 @@ Application allows one to track the day to day activities of the Student Organiz
 ___________
 ### App Demo:
 
+https://github.com/Farhan-Faisal/MEDLIFE_APP/assets/77621905/26c32662-cdc4-4ba9-a71e-bb1ff9e4e386
+
 ___________
 ### Running the App:
 - Clone the repository
