@@ -15,10 +15,13 @@
      -  Presidents can assign or modify tasks assigned to other executive members
   -  Settings tab
      -  Executives can change their password and sign out 
+___________
+### App Demo:
 
-
-  ### Features to be implemented
+___________
+### Features to be implemented
   - Member Login
   - Enable in-app purchases to enable event ticket sales through tge app for members
   - Enable task approval by presidents once an executive uploads task completion proof
   - Fix some navigation bugs
+____________
