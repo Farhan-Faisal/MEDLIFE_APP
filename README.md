@@ -1,7 +1,7 @@
-# MEDLIFE_APP Intro
+### MEDLIFE_APP Intro
 - Application allows one to track the day to day activities of the Student Organization
 
-  **- Currently implemented features include:**
+  **Currently implemented features include:**
   -  Login Page: 
      -  Executive Members can login
   -  Events Tab: 
@@ -16,7 +16,8 @@
   -  Settings tab
      -  Executives can change their password and sign out 
 
-  **Features to be implemented**
+
+  ### Features to be implemented
   - Member Login
   - Enable in-app purchases to enable event ticket sales through tge app for members
   - Enable task approval by presidents once an executive uploads task completion proof
