@@ -19,6 +19,11 @@ ___________
 ### App Demo:
 
 ___________
+### Running the App:
+- Clone the repository
+- Open project in xCode
+- Hit Run
+___________
 ### Features to be implemented
   - Member Login
   - Enable in-app purchases to enable event ticket sales through tge app for members
