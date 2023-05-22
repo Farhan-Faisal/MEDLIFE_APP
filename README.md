@@ -5,7 +5,7 @@ Application allows one to track the day to day activities of the Student Organiz
 -  Login Page: 
    -  Executive Members can login
 -  Events Tab: 
-   -  Executives can see upcoming events hosted by the lub
+   -  Executives can see upcoming events hosted by the club
    -  Designated executives can publish events in the app for others to see
 -  Task Tab
    -  Executives can see tasks assigned to them
