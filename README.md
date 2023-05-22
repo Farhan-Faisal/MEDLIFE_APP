@@ -1,7 +1,11 @@
-### MEDLIFE_APP Intro
+### MEDLIFE_APP
 Application allows one to track the day to day activities of the Student Organization
+___________
+### App Demo:
+https://github.com/Farhan-Faisal/MEDLIFE_APP/assets/77621905/26c32662-cdc4-4ba9-a71e-bb1ff9e4e386
 
-**Currently implemented features include:**
+_____
+### Currently implemented features include:**
 -  Login Page: 
    -  Executive Members can login
 -  Events Tab: 
@@ -15,11 +19,6 @@ Application allows one to track the day to day activities of the Student Organiz
    -  Presidents can assign or modify tasks assigned to other executive members
 -  Settings tab
    -  Executives can change their password and sign out 
-___________
-### App Demo:
-
-https://github.com/Farhan-Faisal/MEDLIFE_APP/assets/77621905/26c32662-cdc4-4ba9-a71e-bb1ff9e4e386
-
 ___________
 ### Running the App:
 - Clone the repository
