@@ -5,7 +5,7 @@ ___________
 https://github.com/Farhan-Faisal/MEDLIFE_APP/assets/77621905/26c32662-cdc4-4ba9-a71e-bb1ff9e4e386
 
 _____
-### Currently implemented features include:**
+### Currently implemented features include:
 -  Login Page: 
    -  Executive Members can login
 -  Events Tab: 
